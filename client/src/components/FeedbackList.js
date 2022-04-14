@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from "react-router-dom"
 
 function FeedbackList({details}) {
-  console.log("from feedback list",details)
+ 
 
   if(details.length===0) {
     return <h3 style={{textAlign:"center", margin:"90px"}}>No feedback has been added yet.</h3>

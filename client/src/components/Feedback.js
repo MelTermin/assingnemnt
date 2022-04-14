@@ -1,17 +1,20 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import image from "../images/Vector.png";
 import down from "../images/down.png";
 import axios from "axios";
 import FeedbackList from './FeedbackList';
+import FeedBackContext from "../context/contextApi"
 
 function Feedback() {
+
+  const {allFeedBack,setAllFeedback}=useContext( FeedBackContext)
 
   const [text, setText]=useState("")
   const [positive,setPositive]=useState("")
   const [negative,setNegative]=useState("")
   const [disable,setDisable]=useState(false)
   const [disable1,setDisable1]=useState(false)
-  const [details,setDetails]=useState([]);
+  // const [details,setDetails]=useState([]);
 
   const feedbackHandler =(e)=> {
 
@@ -36,8 +39,9 @@ function Feedback() {
         comment: text
 
       }).then (data => {
-        //console.log(data.data)
-        setDetails([...details, data.data])
+        console.log(data.data)
+        // setDetails([...details, data.data])
+        setAllFeedback([...allFeedBack, data.data])
      
         setDisable(false);
         setDisable1(false);
@@ -53,18 +57,18 @@ function Feedback() {
 
   }
 
-  useEffect(()=> {
-    const json= JSON.stringify(details);
-    localStorage.setItem("feedback",json)
-  },[details])
+  // useEffect(()=> {
+  //   const json= JSON.stringify(details);
+  //   localStorage.setItem("feedback",json)
+  // },[details])
 
-  useEffect(()=> {
-    const json = localStorage.getItem("feedback");
-    const loadedFeedback= JSON.parse(json)
-    if(loadedFeedback) {
-      setDetails(loadedFeedback)
-    }
-  },[])
+  // useEffect(()=> {
+  //   const json = localStorage.getItem("feedback");
+  //   const loadedFeedback= JSON.parse(json)
+  //   if(loadedFeedback) {
+  //     setDetails(loadedFeedback)
+  //   }
+  // },[])
 
 
   return (
@@ -97,7 +101,7 @@ function Feedback() {
 
     </div>
     
-    <FeedbackList details={details}/>
+    <FeedbackList details={allFeedBack}/>
     </>
   )
 }
