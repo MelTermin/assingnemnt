@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@600&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E5E5E5;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 348px;
+  background: #FFFFFF;
+  margin:100px auto;
+  height: 540px;
+ 
+}
+
+.question {
+  text-align: center;
+  font-size:16px;
+  line-height: 24.34px;
+  color:#161616;
+}
+
+.button {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+input {
+  width: 184px;
+  height :174px;
+  margin: 30px auto;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+ 
+  
+  
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  font-weight:lighter;
+  font-size: 14px;
+  line-height :21px;
+  color: #161616;
+
+  font-style: normal;
+  border:none;
+  background-color: white;
+  cursor: pointer;
+}
+
+img {
+ margin-right: 10px;
+}
+
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.answer1 {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  font-weight:lighter;
+  font-size: 14px;
+  line-height :21px;
+  color: #161616;
+  font-style: normal;
+  border:none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.answer1:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+
+.submit-container {
+  display:flex;
+  flex-direction: column;
+}
+
+
+
+
+.btns {
+  display:flex;
+  margin-left: 160px;
+}
+
+.btn-submit {
+  width: 67px;
+  height:32px;
+  padding: 3px 12px;
+  background: #0069D9;
+  border:none;
+  color:white;
+}
+
+.skip {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color:#522143;
+  margin-right: 10px;
+}
