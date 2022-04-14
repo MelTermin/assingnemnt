@@ -127,3 +127,15 @@ button:disabled {
   color:#522143;
   margin-right: 10px;
 }
+
+.feedback-wrapper {
+  border: 2px solid fuchsia;
+  
+}
+
+.wrapper {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 2px solid green;
+}

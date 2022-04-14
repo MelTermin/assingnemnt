@@ -18,7 +18,7 @@ function Feedback() {
     if (e.target.innerText==="Yes") {
       setPositive(true)
       setDisable(true)
-    } else if (e.target.innerText==="No") {
+    } else  {
       setNegative(false)
       setDisable1(true)
    
@@ -96,7 +96,7 @@ function Feedback() {
         </form>
 
     </div>
-
+    
     <FeedbackList details={details}/>
     </>
   )
