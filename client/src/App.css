@@ -129,7 +129,16 @@ button:disabled {
 }
 
 .feedback-wrapper {
-  border: 2px solid fuchsia;
+  text-align: center;
+  max-width: 30em;
+  width: 20em;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  margin: 70px 70px;
+  padding: 10px;
+  background: white;
+  color:black;
   
 }
 
@@ -137,5 +146,34 @@ button:disabled {
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 2px solid green;
+}
+
+
+.edit-wrapper h2 {
+  text-align: center;
+}
+
+.edit-wrapper form {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 348px;
+  background: #FFFFFF;
+  margin:100px auto;
+  height: 540px;
+}
+
+.edit-wrapper form label {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn-edit {
+  width: 67px;
+  height:32px;
+  padding: 3px 12px;
+  background: #0069D9;
+  border:none;
+  color:white;
+  margin-left: 200px;
 }

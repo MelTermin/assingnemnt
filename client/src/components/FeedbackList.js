@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 
-function FeedbackList({details}) {
+function FeedbackList({details,setDetails}) {
  
 
   if(details.length===0) {
@@ -13,10 +13,10 @@ function FeedbackList({details}) {
       {details.map((item,index)=>{
         return (
           <div className='feedback-wrapper' key={index}>
-            <p>Comment : <span className=''>{item.comment}</span></p>
+            <p>Comment : <span >{item.comment}</span></p>
             <p>Page helpfull: {item.wasHelpful.toString()}</p>
-            <Link to= {`/feedback/${item.id}`}>
-              <button className="btn btn-edit" >Edit</button>
+            <Link to= {`/feedback/${item.id}`} >
+              <button className="btn-submit" >Edit</button>
             </Link>
           </div>
         )
