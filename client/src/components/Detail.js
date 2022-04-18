@@ -44,7 +44,6 @@ function Detail({setIsCliked}) {
       comment,
       wasHelpful:positive || negative ,
     }).then((data)=> {
-      console.log(data.data)
       setPostedFeedBack([data.data])
     })
       navigate("/")
