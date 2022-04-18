@@ -156,7 +156,7 @@ button:disabled {
 .edit-wrapper form {
   display:flex;
   flex-direction: column;
-  justify-content: center;
+
   width: 348px;
   background: #FFFFFF;
   margin:100px auto;
@@ -176,4 +176,18 @@ button:disabled {
   border:none;
   color:white;
   margin-left: 200px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
 }

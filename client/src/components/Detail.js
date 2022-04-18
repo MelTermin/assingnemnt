@@ -6,7 +6,7 @@ import image from "../images/Vector.png";
 import down from "../images/down.png";
 
 
-function Detail() {
+function Detail({setIsCliked}) {
  const {setPostedFeedBack}=useContext( FeedBackContext)
   const params = useParams(); 
   const navigate = useNavigate();
@@ -49,13 +49,20 @@ function Detail() {
     })
       navigate("/")
   }
+
+  const closeHandler= ()=> {
+    navigate("/")
+  }
   return (
     <div className='edit-wrapper'>
+
       <form onSubmit={handleEdit}>
+      <div className="titleCloseBtn">
+        <button onClick={closeHandler}>X</button>
+      </div>
         <h2>Edit Feedback</h2>
 
         <label>Is this page helpfull ?</label>
-
           <div className="button">
             <div  className="up">
               <button className="answer" disabled={disable} onClick={(e)=>feedbackHandler(e)}><img src= {image} alt="thums-up"/> Yes</button>

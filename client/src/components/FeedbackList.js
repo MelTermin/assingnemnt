@@ -1,8 +1,14 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React,{useState} from 'react'
+import {useNavigate} from "react-router-dom"
 
-function FeedbackList({details,setDetails}) {
- 
+function FeedbackList({details}) {
+  const [isClicked,setIsCliked]=useState(false);
+  const navigate = useNavigate();
+
+  const openModal = (id) => {
+    setIsCliked(true)
+    navigate(`/feedback/${id}`)
+  }
 
   if(details.length===0) {
     return <h3 style={{textAlign:"center", margin:"90px"}}>No feedback has been added yet.</h3>
@@ -15,9 +21,9 @@ function FeedbackList({details,setDetails}) {
           <div className='feedback-wrapper' key={index}>
             <p>Comment : <span >{item.comment}</span></p>
             <p>Page helpfull: {item.wasHelpful.toString()}</p>
-            <Link to= {`/feedback/${item.id}`} >
-              <button className="btn-submit" >Edit</button>
-            </Link>
+           
+              <button className="btn-submit" onClick={()=>openModal(item.id)} >Edit</button>
+            
           </div>
         )
  

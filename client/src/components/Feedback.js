@@ -36,24 +36,15 @@ function Feedback() {
         createdAt: new Date(),
         wasHelpful:positive || negative ,
         comment: text
-
       }).then (data => {
-        console.log(data.data)
-        // setDetails([...details, data.data])
         setPostedFeedBack([...postFeedBack, data.data])
-     
         setDisable(false);
         setDisable1(false);
         setText("");
-
       })
-    
-
     } catch(error) {
       console.log(error)
     }
-
-
   }
 
   return (
@@ -71,7 +62,7 @@ function Feedback() {
             <div  className="up">
               <button className="answer1" disabled={disable1} onClick={(e)=>feedbackHandler(e)} > <img src= {down} alt="thums-down"/> No </button>
             </div>
-        </div>
+          </div>
 
           <div className='submit-container'>
 
@@ -80,6 +71,7 @@ function Feedback() {
               <p className='skip'>Skip</p>
               <button className='btn-submit' >Submit</button>
             </div>
+            
           </div>
 
         </form>
